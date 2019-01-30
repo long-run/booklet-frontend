@@ -1,5 +1,8 @@
 {
-  "presets": ["@babel/preset-env"],
+  "presets": [
+    "next/babel",
+    "@zeit/next-typescript/babel"
+  ],
   "env": {
     "production": {
       "plugins": [

@@ -5,9 +5,10 @@
   "author": "shrimp1box <shrimp1box@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel ./src/index.html & onchange './src/**/*.{html,ts,tsx,js}' -- prettier --write {{changed}}",
-    "clean": "rimraf dist & rimraf node_modules & rimraf .cache",
-    "build": "yarn clean & yarn & parcel build ./src/index.html --no-source-maps"
+    "dev": "next & onchange './src/**/*.{html,ts,tsx,js}' -- prettier --write {{changed}}",
+    "clean": "rimraf dist & rimraf node_modules",
+    "build": "yarn clean & yarn & next build",
+    "start": "next start"
   },
   "browserslist": [
     "last 2 versions",
@@ -23,12 +24,13 @@
     "@types/react-dom": "^16.0.11",
     "babel-plugin-emotion": "^10.0.6",
     "onchange": "^5.2.0",
-    "parcel-bundler": "^1.11.0",
     "prettier": "1.15.1",
     "rimraf": "^2.6.3",
     "typescript": "^3.2.4"
   },
   "dependencies": {
+    "@zeit/next-typescript": "^1.1.1",
+    "next": "^7.0.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   }
