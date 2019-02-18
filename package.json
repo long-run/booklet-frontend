@@ -5,7 +5,7 @@
   "author": "shrimp1box <shrimp1box@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "next & onchange './src/**/*.{html,ts,tsx,js}' -- prettier --write {{changed}}",
+    "dev": "next src& onchange './src/**/*.{html,ts,tsx,js}' -- prettier --write {{changed}}",
     "clean": "rimraf dist & rimraf node_modules",
     "build": "yarn clean & yarn & next build src",
     "start": "next start src"
@@ -20,6 +20,7 @@
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "@emotion/core": "^10.0.6",
+    "@types/next": "^8.0.1",
     "@types/react": "^16.7.20",
     "@types/react-dom": "^16.0.11",
     "babel-plugin-emotion": "^10.0.6",
@@ -30,6 +31,7 @@
   },
   "dependencies": {
     "@zeit/next-typescript": "^1.1.1",
+    "assign-symbols": "^2.0.2",
     "next": "^7.0.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
