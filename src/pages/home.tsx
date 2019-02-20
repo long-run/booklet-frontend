@@ -1,4 +1,4 @@
-import { GNB } from '../components/GNB/index';
+import { GNB } from '../components/GNB';
 
 export default () => (
   <div>
