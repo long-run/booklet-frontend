@@ -1,5 +1,4 @@
 import { css } from '@emotion/core';
-import { CursorProperty } from 'csstype';
 
 export const fontFamily = [
   'Helvetica Neue',
@@ -18,11 +17,11 @@ export const cursorDefault = css`
   cursor: default;
 `;
 
-export const cursorPointer = css`
+export const cursorPointer: any = css`
   cursor: default;
 `;
 
-export const inheritFont = {
+export const inheritFont: any = {
   color: 'inherit',
   letterSpacing: 'inherit',
   fontFamily: 'inherit',
