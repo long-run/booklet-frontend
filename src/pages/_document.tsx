@@ -1,5 +1,7 @@
-// @ts-ignore
-import Document, { Head, Main, NextDocumentContext, NextScript } from 'next/document';
+/** @jsx jsx */ jsx;
+import { Global, jsx } from '@emotion/core';
+import Document, { Main, NextDocumentContext, NextScript } from 'next/document';
+import { reset } from '../styles/reset';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: NextDocumentContext) {
@@ -10,10 +12,8 @@ class MyDocument extends Document {
   render() {
     return (
       <html>
-        <Head>
-          <style>{`body { margin: 0 }`}</style>
-        </Head>
-        <body className="custom_class">
+        <body>
+          <Global styles={reset} />
           <Main />
           <NextScript />
         </body>

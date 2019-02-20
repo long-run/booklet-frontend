@@ -49,6 +49,7 @@ export const resetLayout = {
 };
 
 export const reset = {
+  body: css([resetLayout]),
   a: css([
     inheritFont,
     cursorPointer,
