@@ -1,8 +1,8 @@
-import { GnB } from '../components/GnB/index';
+import { GNB } from '../components/GNB/index';
 
 export default () => (
   <div>
-    <GnB />
+    <GNB />
     야호
   </div>
 );
