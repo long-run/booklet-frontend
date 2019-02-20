@@ -49,6 +49,13 @@ export const resetLayout = {
 };
 
 export const reset = {
+  html: css([
+    resetFont,
+    resetLayout,
+    {
+      textSizeAdjust: '100%',
+    },
+  ]),
   body: css([resetLayout]),
   a: css([
     inheritFont,
@@ -61,7 +68,6 @@ export const reset = {
   ]),
   article: css([resetLayout]),
   aside: css([resetLayout]),
-  body: css([resetLayout, cursorDefault]),
   button: css([cursorPointer, inheritFont, resetAppearance, resetLayout]),
   canvas: css([resetLayout]),
   dd: css([resetLayout]),
@@ -76,13 +82,6 @@ export const reset = {
   form: css([resetLayout]),
   header: css([resetLayout]),
   hr: css({ display: 'none' }),
-  html: css([
-    resetFont,
-    resetLayout,
-    {
-      textSizeAdjust: '100%',
-    },
-  ]),
   h1: css([resetLayout]),
   h2: css([resetLayout]),
   h3: css([resetLayout]),
