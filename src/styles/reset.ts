@@ -1,6 +1,7 @@
 import { css } from '@emotion/core';
 
 export const fontFamily = [
+  'Spoqa Han Sans',
   'Helvetica Neue',
   'Apple SD Gothic Neo',
   'arial',
