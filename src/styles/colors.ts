@@ -17,7 +17,6 @@ export const coralViolet_90 = '#80357a';
 
 // gray
 export const gray_05 = '#f9fafa';
-export const gray_07 = '#f1f2f3';
 export const gray_10 = '#e3e6e8';
 export const gray_20 = '#cdd3d7';
 export const gray_30 = '#b8c0c4';
@@ -26,9 +25,6 @@ export const gray_50 = '#8f999f';
 export const gray_60 = '#7b868c';
 export const gray_70 = '#677278';
 export const gray_80 = '#586166';
-export const gray_85 = '#485054';
-export const gray_90 = '#393f42';
-export const gray_95 = '#292e30';
 
 // etc
 export const blueGreen = '#409599';
