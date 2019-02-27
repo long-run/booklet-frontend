@@ -32,3 +32,33 @@ export const hulkGreen = '#4ab367';
 export const indigo = '#354380';
 export const mustard = '#f1c33f';
 export const shrekGreen = '#90cc55';
+
+export const colors = {
+  coralPink_05,
+  coralPink_10,
+  coralPink_20,
+  coralPink_30,
+  coralPink_40,
+  coralPink_50,
+  coralPink_70,
+  coralPink_90,
+  coralViolet_50,
+  coralViolet_60,
+  coralViolet_70,
+  coralViolet_80,
+  coralViolet_90,
+  gray_05,
+  gray_10,
+  gray_20,
+  gray_30,
+  gray_40,
+  gray_50,
+  gray_60,
+  gray_70,
+  gray_80,
+  blueGreen,
+  hulkGreen,
+  indigo,
+  mustard,
+  shrekGreen,
+};
