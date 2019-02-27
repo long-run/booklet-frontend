@@ -22,4 +22,5 @@ export const profileImageStyle = css`
   height: 24px;
   color: white;
   border-radius: 100px;
+  cursor: pointer;
 `;
