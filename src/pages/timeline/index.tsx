@@ -1,7 +1,8 @@
 import React from 'react';
 import { PostProps } from '../../components/Post';
-import { Title } from './Title';
+import { AddPost } from '../../components/AddPost';
 import { PostList } from '../../components/PostList';
+import { Title } from './Title';
 
 const dummyPost: PostProps = {
   title: 'When Breath Becomes Air',
@@ -29,6 +30,7 @@ export default class Timeline extends React.Component {
   render() {
     return (
       <div>
+        <AddPost />
         <Title />
         <PostList postList={postList} />
       </div>

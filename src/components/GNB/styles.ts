@@ -9,10 +9,19 @@ export const wrapper = css`
   flex-direction: row;
 `;
 
+export const logoStyle = css`
+  display: inline-block;
+  width: 20px;
+  height: 24px;
+  color: white;
+  cursor: pointer;
+`;
+
 export const titleStyle = css`
   display: inline-block;
   color: white;
   font-size: 15px;
+  padding-left: 10px;
   flex: auto;
 `;
 
