@@ -11,8 +11,9 @@ const dummyPost: PostProps = {
   coverImage: '',
   status: 1,
   userName: 'Abbie Wilson',
-  userProfileImage: '',
-  modifiedDate: '',
+  userProfileImage:
+    'https://upload.wikimedia.org/wikipedia/commons/b/bc/Leonardo_DiCaprio_January_2014.jpg',
+  modifiedDate: 'Just now',
   likeCount: 23,
   liked: true,
   key: '1',
