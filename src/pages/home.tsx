@@ -1,6 +1,5 @@
 /** @jsx jsx */ jsx;
 import { jsx } from '@emotion/core';
-import { GNB } from '../components/GNB';
 import { colors } from '../styles';
 
 export default () => (
@@ -9,7 +8,6 @@ export default () => (
       background: colors.shrekGreen,
     }}
   >
-    <GNB />
     야호
   </div>
 );

@@ -5,9 +5,10 @@ import { HeaderProps, Header } from './Header';
 import { SummaryProps, Summary } from './Summary';
 import { ReviewProps, Review } from './Review';
 
-interface postProps extends ActionProps, HeaderProps, ReviewProps, SummaryProps {
+export interface PostProps extends ActionProps, HeaderProps, ReviewProps, SummaryProps {
   key: string;
 }
+
 const getHeaderProps = ({
   userName,
   userProfileImage,
@@ -22,7 +23,7 @@ const getSummeryProps = ({
 }: SummaryProps): SummaryProps => ({ title, author, rating, coverImage, status });
 const getActionProps = ({ liked, likeCount }: ActionProps): ActionProps => ({ liked, likeCount });
 
-export const Post: React.FunctionComponent<postProps> = (props: postProps) => (
+export const Post: React.FunctionComponent<PostProps> = (props: PostProps) => (
   <article>
     <Header {...getHeaderProps(props)} />
     <Summary {...getSummeryProps(props)} />
