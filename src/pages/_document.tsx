@@ -1,7 +1,6 @@
 /** @jsx jsx */ jsx;
 import { Global, jsx } from '@emotion/core';
 import Document, { Main, Head, NextDocumentContext, NextScript } from 'next/document';
-import { GNB } from '../components/GNB/index';
 import { reset } from '../styles/reset';
 import { fontFace } from '../styles/fontFace';
 
@@ -22,7 +21,6 @@ class MyDocument extends Document {
         </Head>
         <body>
           <Global styles={[fontFace, reset]} />
-          <GNB />
           <Main />
           <NextScript />
         </body>

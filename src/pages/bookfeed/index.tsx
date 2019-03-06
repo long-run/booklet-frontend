@@ -1,9 +1,7 @@
 import { jsx } from '@emotion/core';
 import React from 'react';
-import { GNB } from '../../components/GNB';
 import { PostProps } from '../../components/Post';
-import { AddPost } from '../../components/AddPost';
-import { PostList } from '../../components/PostList';
+import { Bookfeed } from '../../components/Bookfeed';
 
 const dummyPost: PostProps = {
   title: 'When Breath Becomes Air',
@@ -26,15 +24,11 @@ const dummyPost: PostProps = {
     'When something like a parasite or some organic matter gets implanted in an oyster or mollusk, a pearl is formed. These are called natural pearls as they are formed by nature. A cultured pearl is something that has the intervention of humans. A pearl farmer inserts a similar object into the oyster or mollusk and the pearl that is thus formed is called a cultured pearl. The rest of the process remains the same. The only difference being implanting the organic matter into the oyster. The size of the pearl, either natural or cultured depends on the length of time it remains in the oyster. The larger the size, the more valuable is the pearl.  All these cultured pearls are grown on pearl farms. ',
 };
 
-const postList = [dummyPost];
-
 export default class Timeline extends React.Component {
   render() {
     return (
       <>
-        <GNB />
-        <AddPost />
-        <PostList postList={postList} />
+        <Bookfeed {...dummyPost} />
       </>
     );
   }
