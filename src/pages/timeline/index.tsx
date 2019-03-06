@@ -31,7 +31,6 @@ export default class Timeline extends React.Component {
     return (
       <div>
         <AddPost />
-        <Title />
         <PostList postList={postList} />
       </div>
     );

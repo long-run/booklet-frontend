@@ -55,6 +55,7 @@ export const reset = {
     resetLayout,
     {
       textSizeAdjust: '100%',
+      userSelect: 'none',
     },
   ]),
   body: css([resetLayout]),

@@ -1,5 +1,6 @@
 /** @jsx jsx */ jsx;
 import { jsx } from '@emotion/core';
+import * as styles from './styles';
 
 export interface HeaderProps {
   userName: string;
@@ -10,13 +11,17 @@ export interface HeaderProps {
 export const Header: React.FunctionComponent<HeaderProps> = (props: HeaderProps) => {
   const { userName, userProfileImage, modifiedDate } = props;
   return (
-    <div>
-      <div>
-        <img src={userProfileImage} alt={`${userName} profile image`} />
+    <div css={styles.header}>
+      <div css={styles.profileImageWrapper}>
+        <img css={styles.profileImage} src={userProfileImage} alt={`${userName} profile image`} />
       </div>
-      <div>
-        <h2>{userName}</h2>
-        <p>{modifiedDate}</p>
+      <div css={styles.postMetadata}>
+        <h2 css={styles.userName}>{userName}</h2>
+        <p css={styles.modifiedDate}>{modifiedDate}</p>
+      </div>
+      <div css={styles.postEditWrapper}>
+        <button css={styles.editButton}>dotdotdot</button>
+        <div css={styles.editModal}>modal</div>
       </div>
     </div>
   );

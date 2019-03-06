@@ -7,13 +7,10 @@ export interface PostListProps {
   postList: Array<PostProps>;
 }
 
-export class PostList extends React.Component<PostListProps> {
-  renderPostList() {
-    const { postList } = this.props;
-    return postList.map(post => <Post {...post} />);
-  }
-
-  render() {
-    return <div>{this.renderPostList()}</div>;
-  }
-}
+export const PostList: React.FunctionComponent<PostListProps> = (props: PostListProps) => (
+  <div>
+    {props.postList.map(post => (
+      <Post {...post} />
+    ))}
+  </div>
+);
