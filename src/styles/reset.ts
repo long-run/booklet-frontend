@@ -192,6 +192,13 @@ export const reset = css`
   textarea {
     ${inheritFont};
     ${resetLayout};
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
   }
   th {
     ${resetLayout};
