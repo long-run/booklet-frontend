@@ -2,6 +2,8 @@ import { jsx } from '@emotion/core';
 import React from 'react';
 import { PostProps } from '../../components/Post';
 import { Bookfeed } from '../../components/Bookfeed';
+import ApolloClient from 'apollo-boost';
+import gql from 'graphql-tag';
 
 const dummyPost: PostProps = {
   title: 'When Breath Becomes Air',
@@ -25,9 +27,51 @@ const dummyPost: PostProps = {
 };
 
 export default class Timeline extends React.Component {
+  state = { response: null };
+
+  componentDidMount() {
+    const client = new ApolloClient({
+      uri: 'http://localhost:4466',
+    });
+    client
+      .query({
+        query: gql`
+          {
+            posts {
+              id
+              user {
+                id
+                name
+              }
+              bookfeed {
+                id
+                book {
+                  title
+                  isbn
+                  id
+                  author
+                  book_cover
+                }
+                rating
+                status
+                background_theme
+                note
+                reg_date
+                modified_date
+              }
+              liked
+              like_count
+            }
+          }
+        `,
+      })
+      .then(console.log)
+      .catch(console.error);
+  }
   render() {
     return (
       <>
+        <div>{this.state.response}</div>
         <Bookfeed {...dummyPost} />
       </>
     );
