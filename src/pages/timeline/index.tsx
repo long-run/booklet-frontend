@@ -4,13 +4,15 @@ import { GNB } from '../../components/GNB';
 import { PostProps } from '../../components/Post';
 import { AddPost } from '../../components/AddPost';
 import { PostList } from '../../components/PostList';
+import { PostStatus } from '../../components/Post/Summary';
 
 const dummyPost: PostProps = {
   title: 'When Breath Becomes Air',
   author: 'by Paul Kalanithi',
-  rating: 5,
-  coverImage: '',
-  status: 1,
+  rating: 3,
+  coverImage: 'https://textbookcentre.com/media/products/when_breath.jpg',
+  backgroundImage: 'https://source.unsplash.com/collection/4491773',
+  status: PostStatus.CurrentlyReading,
   userName: 'Abbie Wilson',
   userProfileImage:
     'https://upload.wikimedia.org/wikipedia/commons/b/bc/Leonardo_DiCaprio_January_2014.jpg',

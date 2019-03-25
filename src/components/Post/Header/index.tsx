@@ -1,5 +1,6 @@
 /** @jsx jsx */ jsx;
 import { jsx } from '@emotion/core';
+import ThreeDotIcon from '../../SVG/ThreeDot.svg';
 import * as styles from './styles';
 
 export interface HeaderProps {
@@ -20,7 +21,9 @@ export const Header: React.FunctionComponent<HeaderProps> = (props: HeaderProps)
         <p css={styles.modifiedDate}>{modifiedDate}</p>
       </div>
       <div css={styles.postEditWrapper}>
-        <button css={styles.editButton}>dotdotdot</button>
+        <button css={styles.editButton}>
+          <ThreeDotIcon css={styles.threeDotIcon} />
+        </button>
         <div css={styles.editModal}>modal</div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import { css } from '@emotion/core';
+import { colors } from './colors';
 
 export const fontFamily = [
   'Spoqa Han Sans',
@@ -50,6 +51,14 @@ export const resetLayout = css`
 `;
 
 export const reset = css`
+  .a11y {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+  }
   html {
     ${resetFont};
     ${resetLayout};
@@ -58,6 +67,9 @@ export const reset = css`
   }
   body {
     ${resetLayout};
+    background: ${colors.gray_10};
+    width: 100vw;
+    overflow-x: hidden;
   }
   a {
     ${inheritFont};
