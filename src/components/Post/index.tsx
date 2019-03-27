@@ -5,6 +5,8 @@ import { HeaderProps, Header } from './Header';
 import { SummaryProps, Summary } from './Summary';
 import { ReviewProps, Review } from './Review';
 import * as styles from './styles';
+import { ModalMenu } from '../ModalMenu';
+
 export interface PostProps extends ActionProps, HeaderProps, ReviewProps, SummaryProps {
   key: string;
 }
@@ -30,5 +32,6 @@ export const Post: React.FunctionComponent<PostProps> = (props: PostProps) => (
     <Summary {...getSummeryProps(props)} />
     <Action {...getActionProps(props)} />
     <Review note={props.note} />
+    <ModalMenu />
   </article>
 );
