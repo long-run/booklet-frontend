@@ -8,9 +8,11 @@ export interface ModalMenuProps {}
 export const ModalMenu: React.FunctionComponent<ModalMenuProps> = (props: ModalMenuProps) => {
   return (
     <div css={styles.dim}>
-      <div css={styles.shapeWrapper}>
-        <ModalMenuItem itemName="test" />
-      </div>
+      <ul css={styles.shapeWrapper}>
+        <ModalMenuItem itemName="Want to Read" />
+        <ModalMenuItem itemName="Currently Reading" />
+        <ModalMenuItem itemName="Read" />
+      </ul>
     </div>
   );
 };

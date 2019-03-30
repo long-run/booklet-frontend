@@ -1,6 +1,8 @@
 /** @jsx jsx */ jsx;
 import { jsx } from '@emotion/core';
-import * as styles from './styles';
+import HeartIcon from '../SVG/Heart.svg';
+import { colors } from '../../styles/colors';
+import { ListItemstyles } from './styles';
 
 export interface ModalMenuItemProps {
   itemName: string;
@@ -9,5 +11,10 @@ export interface ModalMenuItemProps {
 export const ModalMenuItem: React.FunctionComponent<ModalMenuItemProps> = (
   props: ModalMenuItemProps,
 ) => {
-  return <div css={styles.listItem}>{props.itemName}</div>;
+  return (
+    <li css={ListItemstyles.itemWrapper}>
+      <HeartIcon css={ListItemstyles.heart} fill={colors.gray_50} />
+      {props.itemName}
+    </li>
+  );
 };
