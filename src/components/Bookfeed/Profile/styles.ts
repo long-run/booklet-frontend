@@ -9,15 +9,17 @@ export const ProfileStyles = {
     width: 100%;
     height: 64px;
     border-bottom: solid 1px ${colors.gray_10};
+    background-color: white;
   `,
   profileImage: css`
-    width: ${imageSize};
-    height: ${imageSize};
-    border-radius: ${imageSize};
-    overflow: hidden;
+    width: 100%;
   `,
   profileImageWrapper: css`
-    padding: 12px;
+    margin: 12px;
+    border-radius: ${imageSize};
+    width: ${imageSize};
+    height: ${imageSize};
+    overflow: hidden;
   `,
   userName: css`
     line-height: 64px;

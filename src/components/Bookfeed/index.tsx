@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import * as React from 'react';
 import { AddBook } from '../Bookfeed/AddBook';
 import { PostDescription } from '../Bookfeed/PostDescription';
-// import * as styles from './styles';
+import * as styles from './styles';
 import { HeaderProps } from '../Post/Header';
 import { BookfeedHeader } from './BookfeedHeader';
 import { Profile } from './Profile';
@@ -14,7 +14,7 @@ import { PostTheme } from './PostTheme';
 export interface BookfeedProps extends HeaderProps {}
 
 export const Bookfeed: React.FunctionComponent<BookfeedProps> = (props: BookfeedProps) => (
-  <>
+  <div css={styles.body}>
     <BookfeedHeader />
     <Profile {...props} />
     <AddBook />
@@ -22,5 +22,5 @@ export const Bookfeed: React.FunctionComponent<BookfeedProps> = (props: Bookfeed
     <ReadingStatus />
     <PostTheme />
     <PostDescription />
-  </>
+  </div>
 );

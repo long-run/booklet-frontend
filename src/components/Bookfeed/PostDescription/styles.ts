@@ -6,6 +6,7 @@ export const wrapper = css`
   min-height: 250px;
   border-bottom: solid 1px ${colors.gray_10};
   padding: 16px 17px;
+  background-color: white;
 `;
 
 export const text = css`

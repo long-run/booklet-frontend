@@ -1,6 +1,12 @@
 import { css } from '@emotion/core';
 import { colors } from '../../styles/colors';
 
+export const body = css`
+  background: white;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+`;
 export const BookFeedStyles = {
   wrapper: css`
     display: flex;
@@ -9,6 +15,7 @@ export const BookFeedStyles = {
     border-bottom: solid 1px ${colors.gray_10};
     cursor: pointer;
     padding: 0 17px;
+    background-color: white;
   `,
   label: css`
     flex: auto;

@@ -6,6 +6,7 @@ export const wrapper = css`
   height: 86px;
   border-bottom: solid 1px ${colors.gray_10};
   padding: 0 17px;
+  background-color: white;
 `;
 
 export const label = css`
