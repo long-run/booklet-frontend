@@ -9,7 +9,7 @@ export const ModalMenu: React.FunctionComponent<ModalMenuProps> = (props: ModalM
   return (
     <div css={styles.dim}>
       <ul css={styles.shapeWrapper}>
-        <ModalMenuItem itemName="Want to Read" />
+        <ModalMenuItem itemName="Want to Read" active />
         <ModalMenuItem itemName="Currently Reading" />
         <ModalMenuItem itemName="Read" />
       </ul>
