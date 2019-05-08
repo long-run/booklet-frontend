@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Profile</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="GNB" transform="translate(-331.000000, -18.000000)" fill="#FFFFFF">
+            <g id="icon/profile">
+                <g transform="translate(331.000000, 18.000000)">
+                    <path d="M12,4.375 C13.45,4.375 14.625,5.55 14.625,7 C14.625,8.45 13.45,9.625 12,9.625 C10.55,9.625 9.375,8.45 9.375,7 C9.375,5.55 10.55,4.375 12,4.375 L12,4.375 Z M12,15.625 C15.71875,15.625 19.625,17.44375 19.625,18.25 L19.625,19.625 L4.375,19.625 L4.375,18.25 C4.375,17.44375 8.28125,15.625 12,15.625 L12,15.625 Z M12,2 C9.2375,2 7,4.2375 7,7 C7,9.75625 9.2375,12 12,12 C14.7625,12 17,9.75625 17,7 C17,4.2375 14.7625,2 12,2 Z M12,13.25 C8.66875,13.25 2,14.91875 2,18.25 L2,22 L22,22 L22,18.25 C22,14.91875 15.33125,13.25 12,13.25 Z" id="Fill-1"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
