@@ -32,6 +32,6 @@ export const Post: React.FunctionComponent<PostProps> = (props: PostProps) => (
     <Summary {...getSummeryProps(props)} />
     <Action {...getActionProps(props)} />
     <Review note={props.note} />
-    <ModalMenu />
+    {/*<ModalMenu />*/}
   </article>
 );

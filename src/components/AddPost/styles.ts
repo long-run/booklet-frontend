@@ -3,6 +3,7 @@ import { colors } from '../../styles/colors';
 
 export const wrapper = css`
   display: flex;
+  margin-top: 60px;
   height: 40px;
   padding: 8px;
   background-color: white;

@@ -3,7 +3,12 @@ import { colors } from '../../styles/colors';
 
 export const wrapper = css`
   display: flex;
-  height: 24px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-sizing: border-box;
+  height: 60px;
   padding: 18px 20px;
   background-color: ${colors.coralPink_50};
   flex-direction: row;

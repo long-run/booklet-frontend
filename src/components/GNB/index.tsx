@@ -21,6 +21,9 @@ export const GNB: React.FunctionComponent<GNBProps> = () => (
         </a>
       </Link>
     </h1>
-    <img css={styles.profileImageStyle} src="https://source.unsplash.com/random/100x100" />
+    <img
+      css={styles.profileImageStyle}
+      src="https://ca.slack-edge.com/T024T5ZGE-U2RQ7MBQR-d0387fc4fb6c-1024"
+    />
   </div>
 );

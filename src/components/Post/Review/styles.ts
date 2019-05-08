@@ -6,10 +6,12 @@ export const reviewWrapper = css`
   border-top: 1px solid ${colors.gray_20};
 `;
 export const review = css`
+  display: block;
   font-size: 14px;
   color: ${colors.gray_50};
   line-height: 1.4em;
   word-break: keep-all;
+  word-wrap: break-word;
 `;
 export const moreButton = css`
   margin-top: 10px;

@@ -6,8 +6,8 @@ import ArrowIcon from '../../SVG/NoneDashedArrowDown.svg';
 import * as styles from './styles';
 
 export enum PostStatus {
-  WantToRead = 'WantToRead',
-  CurrentlyReading = 'CurrentlyReading',
+  WantToRead = 'Want To Read',
+  CurrentlyReading = 'Currently Reading',
   Read = 'Read',
 }
 export interface SummaryProps {
