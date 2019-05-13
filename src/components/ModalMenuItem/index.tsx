@@ -7,6 +7,7 @@ export interface ModalMenuItemProps {
   label: string;
   icon?: any;
   active?: boolean;
+  onClick: any;
 }
 
 export const ModalMenuItem: React.FunctionComponent<ModalMenuItemProps> = (
@@ -14,7 +15,11 @@ export const ModalMenuItem: React.FunctionComponent<ModalMenuItemProps> = (
 ) => {
   const Icon = props.icon;
   return (
-    <li css={ListItemStyles.itemWrapper} className={props.active ? 'active' : ''}>
+    <li
+      css={ListItemStyles.itemWrapper}
+      className={props.active ? 'active' : ''}
+      onClick={props.onClick}
+    >
       <Icon css={ListItemStyles.icon} />
       {props.label}
       {props.active && <CheckIcon css={ListItemStyles.checked} />}
