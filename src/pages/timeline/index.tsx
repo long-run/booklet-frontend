@@ -1,10 +1,11 @@
 import { jsx } from '@emotion/core';
 import React from 'react';
-import { GNB } from '../../components/GNB';
-import { PostProps } from '../../components/Post';
 import { AddPost } from '../../components/AddPost';
-import { PostList } from '../../components/PostList';
+import { GNB } from '../../components/GNB';
+import { PostStatusMenu } from '../../components/ModalMenu';
+import { PostProps } from '../../components/Post';
 import { PostStatus } from '../../components/Post/Summary';
+import { PostList } from '../../components/PostList';
 
 /*
 const dummyPost1: PostProps = {
@@ -183,6 +184,11 @@ export default class Timeline extends React.Component {
         <GNB />
         <AddPost />
         <PostList postList={postList} />
+        <PostStatusMenu
+          isOpen={true}
+          active={PostStatus.CurrentlyReading}
+          itemList={Object.values(PostStatus)}
+        />
       </>
     );
   }

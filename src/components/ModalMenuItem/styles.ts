@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 import { colors } from '../../styles/colors';
 
-export const ListItemstyles = {
+export const ListItemStyles = {
   itemWrapper: css`
     position: relative;
     width: 260px;
@@ -21,7 +21,7 @@ export const ListItemstyles = {
       color: ${colors.coralPink_50};
     }
   `,
-  heart: css`
+  icon: css`
     display: inline-block;
     width: 16px;
     padding: 14px 12px 16px;
@@ -31,7 +31,7 @@ export const ListItemstyles = {
       fill: ${colors.coralPink_50};
     }
   `,
-  check: css`
+  checked: css`
     position: absolute;
     right: 12px;
     display: inline-block;

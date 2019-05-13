@@ -10,6 +10,7 @@ export enum PostStatus {
   CurrentlyReading = 'Currently Reading',
   Read = 'Read',
 }
+
 export interface SummaryProps {
   title: string;
   author: string;
