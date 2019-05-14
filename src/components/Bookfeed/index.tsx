@@ -1,27 +1,32 @@
 /** @jsx jsx */ jsx;
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import { AddBook } from '../Bookfeed/AddBook';
-import { PostDescription } from '../Bookfeed/PostDescription';
-import * as styles from './styles';
+import { connect } from 'react-redux';
+import { BookFeedState } from '../../service/bookFeed/reducer';
+import { ProfileState } from '../../service/profile/reducer';
+import { AddBook } from './AddBook';
+import { PostDescription } from './PostDescription';
+import { PostStatusMenu } from '../ModalMenu';
+import { PostStatus } from '../Post/Summary';
 import { BookfeedHeader } from './BookfeedHeader';
+import { PostTheme } from './PostTheme';
 import { Profile } from './Profile';
 import { Rating } from './Rating';
 import { ReadingStatus } from './ReadingStatus';
-import { PostTheme } from './PostTheme';
-import { PostStatus } from '../Post/Summary';
-import { PostStatusMenu } from '../ModalMenu';
-import { PostProps } from '../Post';
+import * as styles from './styles';
 
-export interface BookfeedProps extends PostProps {}
+export interface BookfeedProps {
+  bookFeed: BookFeedState;
+  profile: ProfileState;
+}
 
-type BookfeedState = {
+type BookfeedInnerState = {
   isOpen: boolean;
   selected?: any;
 };
 
-export class Bookfeed extends React.Component<BookfeedProps, BookfeedState> {
-  state = { isOpen: false, selected: this.props.status };
+export class _Bookfeed extends React.Component<BookfeedProps, BookfeedInnerState> {
+  state = { isOpen: false, selected: this.props.bookFeed.status };
   setIsOpen = () => this.setState({ isOpen: !this.state.isOpen });
   setSelected = (selected: any) => {
     this.setState({ selected, isOpen: false });
@@ -29,13 +34,14 @@ export class Bookfeed extends React.Component<BookfeedProps, BookfeedState> {
 
   render() {
     const { selected, isOpen } = this.state;
+    const { profile, bookFeed } = this.props;
 
     return (
       <div css={styles.body}>
-        <BookfeedHeader {...this.props} />
-        <Profile {...this.props} />
-        <AddBook {...this.props} />
-        <Rating {...this.props} />
+        <BookfeedHeader {...bookFeed} />
+        <Profile {...profile} />
+        <AddBook />
+        <Rating {...bookFeed} />
         <ReadingStatus status={selected} onClickStatus={this.setIsOpen} />
         <PostTheme />
         <PostDescription />
@@ -50,3 +56,7 @@ export class Bookfeed extends React.Component<BookfeedProps, BookfeedState> {
     );
   }
 }
+
+const mapStateToProps = ({ bookFeed, profile }: any) => ({ bookFeed, profile });
+
+export const Bookfeed = connect(mapStateToProps)(_Bookfeed);

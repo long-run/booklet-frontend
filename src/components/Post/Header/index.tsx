@@ -3,13 +3,7 @@ import { jsx } from '@emotion/core';
 import ThreeDotIcon from '../../SVG/ThreeDot.svg';
 import * as styles from './styles';
 
-export interface HeaderProps {
-  userName: string;
-  userProfileImage: string;
-  modifiedDate: string;
-}
-
-export const Header: React.FunctionComponent<HeaderProps> = (props: HeaderProps) => {
+export const Header: React.FunctionComponent<HeaderState> = (props: HeaderState) => {
   const { userName, userProfileImage, modifiedDate } = props;
   return (
     <div css={styles.header}>

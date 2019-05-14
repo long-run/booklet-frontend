@@ -1,12 +1,12 @@
-/** @jsx jsx */ jsx;
+/** @jsx jsx */
+
+jsx;
 import { jsx } from '@emotion/core';
 import * as React from 'react';
+import { ReviewState } from '../../../service/posts/reducer';
 import * as styles from './styles';
-export interface ReviewProps {
-  note: string;
-}
 
-export class Review extends React.Component<ReviewProps> {
+export class Review extends React.Component<ReviewState> {
   state = { isFolded: null };
   reviewBody: null | HTMLParagraphElement = null;
 

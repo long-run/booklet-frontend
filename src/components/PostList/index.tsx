@@ -1,18 +1,26 @@
 /** @jsx jsx */ jsx;
 import { jsx } from '@emotion/core';
 import React from 'react';
-import { Post, PostProps } from '../Post';
+import { connect } from 'react-redux';
+import { PostsState } from '../../service/posts/reducer';
+import { Post } from '../Post';
 
 export interface PostListProps {
-  postList: Array<PostProps>;
+  posts: PostsState;
 }
 
-export const PostList: React.FunctionComponent<PostListProps> = props => {
+export const _PostList: React.FunctionComponent<PostListProps> = props => {
   return (
     <div>
-      {props.postList.map(post => (
+      {props.posts.map(post => (
         <Post key={post.key} {...post} />
       ))}
     </div>
   );
 };
+
+function mapStateToProps({ posts }: any) {
+  return { posts };
+}
+
+export const PostList = connect(mapStateToProps)(_PostList);

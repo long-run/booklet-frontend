@@ -1,5 +1,8 @@
-import { PostProps } from '../../components/Post';
-import { PostStatus } from '../../components/Post/Summary';
+import { PostStatus } from '../components/Post/Summary';
+import { PostProps } from '../components/Post';
+
+// import { PostProps } from '../../components/Post';
+// import { PostStatus } from '../../components/Post/Summary';
 
 /*
 const dummyPost1: PostProps = {
@@ -169,4 +172,11 @@ const PostProps5 = {
 가장 인상깊게 읽은 부분은 역시 오베와 그가 사랑한 아내의 이야기였습니다. <br/><br/>",
 };
 
-export const posts = [PostProps0, PostProps1, PostProps2, PostProps3, PostProps4, PostProps5];
+export const posts = [
+  PostProps0,
+  PostProps1,
+  PostProps2,
+  PostProps3,
+  PostProps4,
+  PostProps5,
+].reverse();

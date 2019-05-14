@@ -1,13 +1,14 @@
 /** @jsx jsx */ jsx;
 import { jsx } from '@emotion/core';
 import * as React from 'react';
+import { BookFeedState } from '../../../service/bookFeed/reducer';
 import { colors } from '../../../styles/colors';
 import StarIcon from '../../SVG/Star.svg';
 import { BookFeedStyles } from '../styles';
 import * as styles from './styles';
 
-export class Rating extends React.Component {
-  state = { hoverIndex: -1, selectedIndex: -1 };
+export class Rating extends React.Component<BookFeedState> {
+  state = { hoverIndex: -1, selectedIndex: this.props.rating };
 
   setHoverIndex = (hoverIndex: number) => this.setState({ hoverIndex });
   setSelectedIndex = (selectedIndex: number) => this.setState({ selectedIndex });

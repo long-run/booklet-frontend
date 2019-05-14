@@ -1,6 +1,8 @@
-/** @jsx jsx */ jsx;
+/** @jsx jsx */
+jsx;
 import { jsx } from '@emotion/core';
 import { ReactEventHandler } from 'react';
+import { SummaryState } from '../../../service/posts/reducer';
 import StarIcon from '../../SVG/Star.svg';
 import BookmarkIcon from '../../SVG/Bookmark.svg';
 import ArrowIcon from '../../SVG/NoneDashedArrowDown.svg';
@@ -12,17 +14,11 @@ export enum PostStatus {
   Read = 'Read',
 }
 
-export interface SummaryProps {
-  title: string;
-  author: string;
-  rating: number;
-  coverImage: string;
-  backgroundImage: string;
-  status: PostStatus;
+interface SummeryProps extends SummaryState {
   onClickStatus?: ReactEventHandler;
 }
 
-export const Summary: React.FunctionComponent<SummaryProps> = (props: SummaryProps) => {
+export const Summary: React.FunctionComponent<SummeryProps> = props => {
   const { title, author, rating, coverImage, backgroundImage, status } = props;
 
   return (

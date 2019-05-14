@@ -2,10 +2,10 @@ import App, { AppComponentProps, Container, DefaultAppIProps, NextAppContext } f
 import { Provider } from 'react-redux';
 import { Store } from 'redux';
 import withRedux from 'next-redux-wrapper';
-import makeStore from '../store/config';
+import makeStore, { StoreRootState } from '../store/config';
 
 interface StoreAppProps extends AppComponentProps {
-  store: Store;
+  store: Store<StoreRootState>;
   // tslint:disable-next-line
   pageProps: any;
 }

@@ -34,5 +34,8 @@ export const BookfeedHeaderStyles = {
     padding: 0 16px;
     letter-spacing: normal;
     color: ${colors.gray_30};
+    &.active {
+      color: #498eff;
+    }
   `,
 };

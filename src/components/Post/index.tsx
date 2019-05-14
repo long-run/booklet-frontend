@@ -1,15 +1,15 @@
 /** @jsx jsx */ jsx;
 import { jsx } from '@emotion/core';
-import { ReactEventHandler } from 'react';
-import { ActionProps, Action } from './Action';
-import { HeaderProps, Header } from './Header';
-import { SummaryProps, Summary, PostStatus } from './Summary';
-import { ReviewProps, Review } from './Review';
-import * as styles from './styles';
+import React, { ReactEventHandler } from 'react';
 import { PostStatusMenu } from '../ModalMenu';
-import React from 'react';
+import { Action } from './Action';
+import { Header } from './Header';
+import { Review } from './Review';
+import * as styles from './styles';
+import { PostStatus, Summary } from './Summary';
+import { ActionState, HeaderState, PostState, SummaryState } from '../../service/posts/reducer';
 
-export interface PostProps extends ActionProps, HeaderProps, ReviewProps, SummaryProps {
+export interface PostProps extends PostState {
   key: string;
   onEditStatus?: ReactEventHandler;
 }
@@ -18,7 +18,7 @@ const getHeaderProps = ({
   userName,
   userProfileImage,
   modifiedDate,
-}: HeaderProps): HeaderProps => ({ userName, userProfileImage, modifiedDate });
+}: HeaderState): HeaderState => ({ userName, userProfileImage, modifiedDate });
 const getSummeryProps = ({
   title,
   author,
@@ -26,16 +26,16 @@ const getSummeryProps = ({
   coverImage,
   backgroundImage,
   status,
-}: SummaryProps): SummaryProps => ({ title, author, rating, coverImage, backgroundImage, status });
-const getActionProps = ({ liked, likeCount }: ActionProps): ActionProps => ({ liked, likeCount });
+}: SummaryState): SummaryState => ({ title, author, rating, coverImage, backgroundImage, status });
+const getActionProps = ({ liked, likeCount }: ActionState): ActionState => ({ liked, likeCount });
 
-type PostState = {
+type PostInnerState = {
   isOpen: boolean;
   selected?: any;
 };
 
 // todo refac demo version - state 사용하여 post status 변경하는 ux
-export class Post extends React.Component<PostProps, PostState> {
+export class Post extends React.Component<PostProps, PostInnerState> {
   state = { isOpen: false, selected: this.props.status };
   setIsOpen = () => this.setState({ isOpen: !this.state.isOpen });
   setSelected = (selected: any) => {

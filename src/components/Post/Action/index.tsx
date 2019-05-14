@@ -3,13 +3,9 @@ import { jsx } from '@emotion/core';
 import LikeIcon from '../../SVG/Like.svg';
 import * as styles from './styles';
 import React from 'react';
+import { ActionState } from '../../../service/app/reducer';
 
-export interface ActionProps {
-  liked: boolean;
-  likeCount: number;
-}
-
-export class Action extends React.Component<ActionProps> {
+export class Action extends React.Component<ActionState> {
   state = {
     hover: false,
     liked: this.props.liked,

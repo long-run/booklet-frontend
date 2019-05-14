@@ -1,6 +1,4 @@
 import { css } from '@emotion/core';
-import { colors } from '../../styles/colors';
-import { lineClamp } from '../../styles';
 
 export const dim = css`
   position: fixed;
