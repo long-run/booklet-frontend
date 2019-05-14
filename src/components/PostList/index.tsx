@@ -11,7 +11,7 @@ export const PostList: React.FunctionComponent<PostListProps> = props => {
   return (
     <div>
       {props.postList.map(post => (
-        <Post {...post} />
+        <Post key={post.key} {...post} />
       ))}
     </div>
   );
