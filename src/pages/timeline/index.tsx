@@ -1,10 +1,11 @@
 import { jsx } from '@emotion/core';
 import React from 'react';
-import { GNB } from '../../components/GNB';
-import { PostProps } from '../../components/Post';
 import { AddPost } from '../../components/AddPost';
-import { PostList } from '../../components/PostList';
+import { GNB } from '../../components/GNB';
+import { PostEdit, PostEditMenu, PostStatusMenu } from '../../components/ModalMenu';
+import { PostProps } from '../../components/Post';
 import { PostStatus } from '../../components/Post/Summary';
+import { PostList } from '../../components/PostList';
 
 /*
 const dummyPost1: PostProps = {
@@ -43,7 +44,7 @@ const PostProps0: PostProps = {
   userProfileImage: 'https://ca.slack-edge.com/TFAMP566L-UFBAWS82F-19c634732a66-72',
   modifiedDate: '2 weeks ago',
   likeCount: 516,
-  liked: true,
+  liked: false,
   key: '1',
   note:
     '제목에 끌려 집어들었고, 앉은 자리에서 다 읽었다. 그러나 솔직히 기분좋은 글은 아니다. <br/><br/>\
@@ -68,7 +69,7 @@ const PostProps1 = {
   userProfileImage: 'https://ca.slack-edge.com/T024T5ZGE-U1SF21DL3-f1ad3c44c3e0-72',
   modifiedDate: '2 weeks ago',
   likeCount: 516,
-  liked: true,
+  liked: false,
   key: '2',
   note:
     '제목에 끌려 집어들었고, 앉은 자리에서 다 읽었다. 그러나 솔직히 기분좋은 글은 아니다. <br/><br/>\
@@ -115,7 +116,7 @@ const PostProps3 = {
   userProfileImage: 'https://ca.slack-edge.com/T024T5ZGE-U1SF21DL3-f1ad3c44c3e0-72',
   modifiedDate: '3 weeks ago',
   likeCount: 78,
-  liked: true,
+  liked: false,
   key: '4',
   note:
     '다들 사는게 힘든가보다. 요즘 베스트셀러 순위를 보면 사람의 마음을 다루고, 위로하는 책들이 쏟아져나온다는 걸 실감할 수 있다. 우스갯소리로 이제는 교회보다 많은게 심리 상담소라고... 예전에는 정신과에 간다고 하면 뭔가 이상한 사람으로 쳐다봤지만, 지금은 그런 인식도 많이 사라지고, 오히려 정신이 건강한 사람들도 예방차원, 교육차원에서라도 적극적으로 그런 상담센터를 찾는다. 회사 차원에서도 직원들의 심신의 안정을 위해 회사 전담 상담소를 설치하는 사례도 많이 있고, 직원들도 쉬는 시간이나 점심 시간 등을 이용해서 상담을 받으며 살아갈 힘을 다시 얻는 경우도 봐왔다.<br/><br/>\
@@ -136,7 +137,7 @@ const PostProps4 = {
   userProfileImage: 'https://ca.slack-edge.com/T024T5ZGE-U1SF21DL3-f1ad3c44c3e0-72',
   modifiedDate: '1 week ago',
   likeCount: 832,
-  liked: true,
+  liked: false,
   key: '5',
   note:
     '책을 놓아버리고 싶은 순간이 종종 있었는데, _“아름다운 것을 아름답다고 느낄 때 우린 행복하다….” 이 한 문장 때문에 끝까지 버틸 수 있었던 것 같다.<br/><br/>\
@@ -162,7 +163,7 @@ const PostProps5 = {
   userProfileImage: 'https://ca.slack-edge.com/T024T5ZGE-U1SF21DL3-f1ad3c44c3e0-72',
   modifiedDate: '1 week ago',
   likeCount: 132,
-  liked: true,
+  liked: false,
   key: '6',
   note:
     "보다가 몇 번이나 울 뻔했는지 모릅니다. 표지의 부루퉁한 할아버지와 괴팍한 그의 성격을 표현한 책소개 글을 보았을 때는 이렇게 아름다운 사랑을 하는 사람일 것이라고는 생각도 못했습니다. 과연 인구 900만의 스웨덴에서 70만부 이상 판매된 베스트셀러답습니다.<br/><br/>\

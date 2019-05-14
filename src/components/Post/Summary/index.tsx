@@ -1,5 +1,6 @@
 /** @jsx jsx */ jsx;
 import { jsx } from '@emotion/core';
+import { ReactEventHandler } from 'react';
 import StarIcon from '../../SVG/Star.svg';
 import BookmarkIcon from '../../SVG/Bookmark.svg';
 import ArrowIcon from '../../SVG/NoneDashedArrowDown.svg';
@@ -10,6 +11,7 @@ export enum PostStatus {
   CurrentlyReading = 'Currently Reading',
   Read = 'Read',
 }
+
 export interface SummaryProps {
   title: string;
   author: string;
@@ -17,6 +19,7 @@ export interface SummaryProps {
   coverImage: string;
   backgroundImage: string;
   status: PostStatus;
+  onClickStatus?: ReactEventHandler;
 }
 
 export const Summary: React.FunctionComponent<SummaryProps> = (props: SummaryProps) => {
@@ -48,7 +51,7 @@ export const Summary: React.FunctionComponent<SummaryProps> = (props: SummaryPro
             <span className="a11y">{rating}점</span>
           </p>
           <div css={styles.statusButtonWrapper}>
-            <button type="button" css={styles.statusButton}>
+            <button type="button" css={styles.statusButton} onClick={props.onClickStatus}>
               <BookmarkIcon css={styles.statusIcon} />
               <span css={styles.statusLabel}>{status}</span>
               <ArrowIcon css={styles.arrowIcon} />

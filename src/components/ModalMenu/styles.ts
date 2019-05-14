@@ -3,7 +3,7 @@ import { colors } from '../../styles/colors';
 import { lineClamp } from '../../styles';
 
 export const dim = css`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
