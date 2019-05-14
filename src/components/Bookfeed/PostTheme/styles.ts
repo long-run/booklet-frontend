@@ -3,9 +3,8 @@ import { colors } from '../../../styles/colors';
 
 export const wrapper = css`
   display: block;
-  height: 86px;
   border-bottom: solid 1px ${colors.gray_10};
-  padding: 0 17px;
+  padding: 0 17px 17px 17px;
   background-color: white;
 `;
 
@@ -18,6 +17,8 @@ export const label = css`
 export const themeWrapper = css`
   display: block;
   width: 100%;
+  margin-top: 5px;
+  line-height: 35px;
 `;
 
 export const themeLabel = css`
@@ -32,7 +33,8 @@ export const themeLabel = css`
   padding: 5px 8px 7px 8px;
   box-shadow: 0 0 0 1px ${colors.gray_20};
 
-  &:hover {
+  &:hover,
+  &.selected {
     color: white;
     background-color: ${colors.coralPink_50};
     box-shadow: 0 0 0 1px white;
