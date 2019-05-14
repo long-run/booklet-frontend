@@ -10,8 +10,11 @@ export const review = css`
   font-size: 14px;
   color: ${colors.gray_50};
   line-height: 1.4em;
-  word-break: keep-all;
   word-wrap: break-word;
+  word-break: break-all;
+  &:lang(ko) {
+    word-break: keep-all;
+  }
 `;
 export const moreButton = css`
   margin-top: 10px;
