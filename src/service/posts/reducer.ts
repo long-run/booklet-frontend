@@ -25,14 +25,27 @@ export interface ReviewState {
 }
 
 export interface PostState extends SummaryState, ActionState, HeaderState, ReviewState {
-  key: string;
+  id: string;
 }
 
 export type PostsState = PostState[];
 
 export const postsInitialState: PostsState = [];
 
-export class PostsReducer extends ImmerReducer<PostsState> {}
+export class PostsReducer extends ImmerReducer<PostsState> {
+  public addPost(payload: { post: PostState }) {
+    this.draftState.push(payload.post);
+  }
+
+  public updatePost(payload: { post: PostState }) {
+    const { post } = payload;
+    this.draftState.forEach((item, idx) => {
+      if (item.id === post.id) {
+        this.draftState[idx] = post;
+      }
+    });
+  }
+}
 
 export const postsReducer = createReducerFunction(PostsReducer, postsInitialState);
 export const postsActions = createActionCreators(PostsReducer);

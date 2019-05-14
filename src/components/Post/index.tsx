@@ -1,17 +1,26 @@
-/** @jsx jsx */ jsx;
+/** @jsx jsx */
+jsx;
 import { jsx } from '@emotion/core';
 import React, { ReactEventHandler } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { PostStatusMenu } from '../ModalMenu';
 import { Action } from './Action';
 import { Header } from './Header';
 import { Review } from './Review';
 import * as styles from './styles';
 import { PostStatus, Summary } from './Summary';
-import { ActionState, HeaderState, PostState, SummaryState } from '../../service/posts/reducer';
+import {
+  ActionState,
+  HeaderState,
+  postsActions,
+  PostState,
+  SummaryState,
+} from '../../service/posts/reducer';
 
 export interface PostProps extends PostState {
-  key: string;
   onEditStatus?: ReactEventHandler;
+  updatePost: any;
 }
 
 const getHeaderProps = ({
@@ -35,10 +44,11 @@ type PostInnerState = {
 };
 
 // todo refac demo version - state 사용하여 post status 변경하는 ux
-export class Post extends React.Component<PostProps, PostInnerState> {
+export class _Post extends React.Component<PostProps, PostInnerState> {
   state = { isOpen: false, selected: this.props.status };
   setIsOpen = () => this.setState({ isOpen: !this.state.isOpen });
   setSelected = (selected: any) => {
+    this.props.updatePost({ post: { ...this.props, status: selected } });
     this.setState({ selected, isOpen: false });
   };
 
@@ -66,3 +76,12 @@ export class Post extends React.Component<PostProps, PostInnerState> {
     );
   }
 }
+
+function mapDispatchToProps(dispatch: any) {
+  return bindActionCreators(postsActions, dispatch);
+}
+
+export const Post = connect(
+  null,
+  mapDispatchToProps,
+)(_Post);

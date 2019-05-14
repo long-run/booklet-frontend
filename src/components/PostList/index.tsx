@@ -1,8 +1,11 @@
-/** @jsx jsx */ jsx;
+/** @jsx jsx */
+
+jsx;
 import { jsx } from '@emotion/core';
 import React from 'react';
 import { connect } from 'react-redux';
-import { PostsState } from '../../service/posts/reducer';
+import { bindActionCreators } from 'redux';
+import { postsActions, PostsState } from '../../service/posts/reducer';
 import { Post } from '../Post';
 
 export interface PostListProps {
@@ -13,7 +16,7 @@ export const _PostList: React.FunctionComponent<PostListProps> = props => {
   return (
     <div>
       {props.posts.map(post => (
-        <Post key={post.key} {...post} />
+        <Post key={post.id} {...post} />
       ))}
     </div>
   );
@@ -23,4 +26,11 @@ function mapStateToProps({ posts }: any) {
   return { posts };
 }
 
-export const PostList = connect(mapStateToProps)(_PostList);
+function mapDispatchToProps(dispatch: any) {
+  return bindActionCreators(postsActions, dispatch);
+}
+
+export const PostList = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(_PostList);
