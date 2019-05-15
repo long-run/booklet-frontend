@@ -1,33 +1,6 @@
 import { PostStatus } from '../components/Post/Summary';
 import { PostState } from '../service/posts/reducer';
 
-// import { PostProps } from '../../components/Post';
-// import { PostStatus } from '../../components/Post/Summary';
-
-/*
-const dummyPost1: PostProps = {
-  title: 'When Breath Becomes Air',
-  author: 'by Paul Kalanithi',
-  rating: 3,
-  coverImage: 'https://textbookcentre.com/media/products/when_breath.jpg',
-  backgroundImage: 'https://source.unsplash.com/collection/4491773',
-  status: PostStatus.CurrentlyReading,
-  userName: 'Abbie Wilson',
-  userProfileImage:
-    'https://upload.wikimedia.org/wikipedia/commons/b/bc/Leonardo_DiCaprio_January_2014.jpg',
-  modifiedDate: 'Just now',
-  likeCount: 23,
-  liked: true,
-  key: '1',
-  note:
-    'For readers of Atul Gawande, Andrew Solomon, and Anne Lamott, a profoundly moving, exquisitely observed memoir by a young neurosurgeon faced with a terminal cancer diagnosis who attempts to answer the question What makes a life worth today.\n' +
-    '\n' +
-    'You would have bought cultured pearls for yourself or for a family member or friends, but do you know what exactly a cultured pearl is?  There is also a wrong notion that a cultured pearl is an artificial pearl. \n' +
-    '\n' +
-    'When something like a parasite or some organic matter gets implanted in an oyster or mollusk, a pearl is formed. These are called natural pearls as they are formed by nature. A cultured pearl is something that has the intervention of humans. A pearl farmer inserts a similar object into the oyster or mollusk and the pearl that is thus formed is called a cultured pearl. The rest of the process remains the same. The only difference being implanting the organic matter into the oyster. The size of the pearl, either natural or cultured depends on the length of time it remains in the oyster. The larger the size, the more valuable is the pearl.  All these cultured pearls are grown on pearl farms. ',
-};
-*/
-
 const PostProps0: PostState = {
   title: '숨결이 바람 될 때',
   author: '폴 칼라니티',
@@ -44,14 +17,18 @@ const PostProps0: PostState = {
   liked: false,
   id: '1',
   note:
-    '제목에 끌려 집어들었고, 앉은 자리에서 다 읽었다. 그러나 솔직히 기분좋은 글은 아니다. <br/><br/>\
-     진료기록의 나열과 짧은 코멘트들을 보고 있자니 작가의 개인적인 일기장을 훔쳐보는 듯한 꺼림칙함과, 진료 녹취록을 타이핑해서 책으로 낼 생각을 했다는 것에 대한 놀라움이 공존했다.<br/><br/>\
-    원래 정신과 진료는 비밀보장이 대원칙이다. 본인의 이야기를 녹음하고 받아적은 것이니 법적 문제는 없겠지만, 내가 상담의였다면 이 책에 대한 이야기를 처음 들었을 때 굉장히 미묘한 기분이 들었을 것 같다. <br/><br/>\
-    상담 녹취에 대한 것이야 지속적으로 고지하고 있었으니 괜찮았을 진 몰라도 이를 받아적어 출간하는 것은 매우 다른 차원의 이야기이다. 부디 저자분이 출간 준비를 모두 마친 후에서야 동의를 구한 것이 아니었기를. <br/> <br/>\
-    계속 떠오르는 질문도 있었다: 과연 저자는 의사 선생님께 인세를 드리고 있을까.스스로를 객관화하는 과정과 "찌질한" 생각들을 문서화하고 공표하는 생각을 할 용기는 분명 저자 개인에게는 큰 도움이 될 것이다. 수입도 부수적으로 따라오니 더할 나위 없다. <br/><br/>\
-    주위 사람들에게 본인을 이해시키는 데도 좋을 테다. 그러나 대다수의 사람들에게 공감을 이끌어낼 수 있는 글은 아닌 것 같다. 개인적으로 일부 공감되는 내용이 있기는 하지만, 저자의 부정적 감정에 매몰되는 시간이 훨씬 길었다. <br/><br/>\
-    책을 읽는 덴 30분 정도 걸렸는데, 활기찬 감정을 되찾는 덴 한 시간이 걸리다니. 손해보는 장사를 한 기분이다. 작가에 대한 응원의 마음이 없었다면 솔직히 저 별점을 주지도 않았을 것이다.본인이 심하게 우울하다면, 부디 바라건대 이 책을 읽지 마시기를. <br/><br/>\
-    그 시간에 전문 상담사를 찾거나, 하다못해 좋아하는 게임을 하건 유투브를 보건 방송을 보건 무언가 다른 걸 하셨으면 좋겠다.',
+    '의사의 의무는 죽음을 늦추거나 환자에게 예전의 삶을 돌려주는 것이 아니라, 삶이 무너져버린 환자와 그 가족을 가슴에 품고 그들이 다시 일어나 자신들이 처한 실존적 상황을 마주보고 이해할 수 있을 때까지 돕는 것이다.<br/><br/>' +
+    '결국 의사도 희망이 필요한 존재였다.<br/><br/>' +
+    '그러하다. 의사도 인간이니까.<br/><br/>' +
+    '인간의 실존과 삶에 대해 끊임없이 고민하고 고민했던 작가의 흔적이 책 곳곳에 드러난다. 이런 작가의 단단한 인문학적 바탕을 보면 영문학자로도 대성하지 않았을까 싶다. 그리고 그런 바탕이 무너져내리는 육체에 죽음을 목전까지 두고도 온전한 정신으로 사랑하는 가족과 생을 마감할 수 있었던 원동력이 되었을 것이다.<br/><br/>' +
+    '뇌는 우리가 겪는 세상의 경험을 중재하기 때문에, 신경성 질환에 걸린 환자와 그 가족은 다음과 같은 질문에 답해야 한다. ‘계속 살아갈 만큼 인생을 의미 있게 만드는 것은 무엇인가?’<br/><br/>\
+    나는 죽음과 마주한 채 내 삶을 가치 있게 만드는 것이 무엇인지 이해해야 했다.\n<br/><br/>' +
+    '인턴시절 ICU 돌때 겨우겨우 생명을 연명하는 환자들을 보면서 내가 저 환자처럼 소생불가능한 상태라 하면 난 절대로 DNR이야, 라고 다짐했었다. ICU특유의 그 시큼하고 비릿한 냄새도 너무 싫었다. 그래서 소아과를 한 것도 있고 (하지만 NICU에는 또다른 냄새가 나지 ㅎ). 주변에도 얘기해 두었다. 혹시 내가 사고를 당하거나 병에 걸려 생명만 겨우 연장하고 있는 상태에서 의식이 없다면 포기해 달라고. 그리고 쓸 수 있는 장기는 다른 사람에게 이식해주고 나머지는 화장해 달라고. 내가 생각했을때, 그런 삶을 이어나가는 것은 나에게 가치가 없다.\n<br/><br/>' +
+    '나는 다윈과 니체가 한 가지 사실에 동의했다는 생각이 들었다. 생물을 규정짓는 특징은 생존을 향한 분투라는 것이다.\n<br/><br/>' +
+    '“평생을 바쳐 여기까지 왔는데, 이제 암을 주십니까?”\n<br/><br/>' +
+    '칼라니티 부부는 암투병중 아이를 갖기로 결정하고 인공수정을 통해 딸을 얻는다. 병세가 급격하게 악화되어가던 때 딸 케이디를 얻고 기뻐하는 장면에서는 참지못하고 펑펑 울었다. 사그라드는 아빠의 생명의 불씨를 딸이 받아 이어가는 것만 같아서.\n<br/><br/>' +
+    '네가 어떻게 살아왔는지, 무슨 일을 했는지, 세상에 어떤 의미 있는 일을 했는지 설명해야 하는 순간이 온다면, 바라건대 네가 죽어가는 아빠의 나날을 충만한 기쁨으로 채워줬음을 빼놓지 말았으면 좋겠구나. 아빠가 평생 느껴보지 못한 기쁨이었고, 그로 인해 아빠는 이제 더 많은 것을 바라지 않고 만족하며 편히 쉴 수 있게 되었단다. 지금 이 순간, 그건 내게 정말로 엄청난 일이란다.\n<br/><br/>' +
+    '이알 당직서며 잠깐만 읽고 자려고 했는데 결국 눈물로 눈이 퉁퉁부어가며 끝까지 읽어내린 후 쓴 후기.',
 };
 
 const PostProps1 = {
@@ -65,7 +42,7 @@ const PostProps1 = {
   userName: 'Ryan',
   userProfileImage: 'https://ca.slack-edge.com/T024T5ZGE-U1SF21DL3-f1ad3c44c3e0-72',
   modifiedDate: '2 weeks ago',
-  likeCount: 516,
+  likeCount: 293,
   liked: false,
   id: '2',
   note:
@@ -84,7 +61,7 @@ const PostProps2 = {
     'https://images.unsplash.com/photo-1521412644187-c49fa049e84d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
   status: PostStatus.Read,
   userName: 'Shrimp1box',
-  userProfileImage: 'https://ca.slack-edge.com/T024T5ZGE-U039TQL2Y-8b9c1dec9867-1024',
+  userProfileImage: 'https://ca.slack-edge.com/T024T5ZGE-U039TQL2Y-8b9c1dec9867-72',
   modifiedDate: '2 weeks ago',
   likeCount: 1024,
   liked: true,
@@ -109,8 +86,8 @@ const PostProps3 = {
   backgroundImage:
     'https://images.unsplash.com/photo-1494208133010-7227229a632a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
   status: PostStatus.WantToRead,
-  userName: 'Ryan',
-  userProfileImage: 'https://ca.slack-edge.com/T024T5ZGE-U1SF21DL3-f1ad3c44c3e0-72',
+  userName: 'Junwoo Lee',
+  userProfileImage: 'https://ca.slack-edge.com/T024T5ZGE-U041RC5KT-60bd569f3a17-72',
   modifiedDate: '3 weeks ago',
   likeCount: 78,
   liked: false,
@@ -122,6 +99,8 @@ const PostProps3 = {
 가끔 내가 그토록 빠르고 경쟁적인 한국 사회에 아직도 발을 담그고 있었다면, 분명 나는 거기서 빠져나오지 못했을 터인데하며 가슴을 쓸어내릴 때가 있다. 그 소용돌이의 한 가운데에서 아마 나는 알면서도 결코 한 발 앞으로 나오기가 정말 힘들었을 것이다. 그 안에서, 거기서 살아남을 방법을 모색하기는 했겠지만. 앞으로 내가 다시 한국에 돌아가게 되더라도, 또는 여기 남더라도, 지금 이 시가는 내 인생관을 다시 점검하게 해주는 매우 중요한 시간이 될 것이다.',
 };
 
+/*Alcion [10:11 PM]
+https://ca.slack-edge.com/T024T5ZGE-U6F5GP8BB-7f9fcea3d2a6-1024*/
 const PostProps4 = {
   title: '언어의 온도',
   author: '이기주',
@@ -130,8 +109,8 @@ const PostProps4 = {
   backgroundImage:
     'https://images.unsplash.com/photo-1436891620584-47fd0e565afb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
   status: PostStatus.CurrentlyReading,
-  userName: 'Ryan',
-  userProfileImage: 'https://ca.slack-edge.com/T024T5ZGE-U1SF21DL3-f1ad3c44c3e0-72',
+  userName: 'Alcion',
+  userProfileImage: 'https://ca.slack-edge.com/T024T5ZGE-U6F5GP8BB-7f9fcea3d2a6-72',
   modifiedDate: '1 week ago',
   likeCount: 832,
   liked: false,
@@ -172,11 +151,4 @@ const PostProps5 = {
 가장 인상깊게 읽은 부분은 역시 오베와 그가 사랑한 아내의 이야기였습니다. <br/><br/>",
 };
 
-export const posts = [
-  PostProps0,
-  PostProps1,
-  PostProps2,
-  PostProps3,
-  PostProps4,
-  PostProps5,
-].reverse();
+export const posts = [PostProps0, PostProps1, PostProps2, PostProps4, PostProps3, PostProps5];

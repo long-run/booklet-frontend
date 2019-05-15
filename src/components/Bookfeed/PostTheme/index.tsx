@@ -1,22 +1,24 @@
-/** @jsx jsx */ jsx;
+/** @jsx jsx */
+
+jsx;
 import { jsx } from '@emotion/core';
 import * as React from 'react';
+import { connect } from 'react-redux';
+import { bookFeedActions } from '../../../service/bookFeed';
+import { ThemeType } from '../../../service/bookFeed/reducer';
+import { BookfeedProps } from '../index';
 import * as styles from './styles';
-
-export enum ThemeType {
-  Romantic = 'Romantic',
-  Mysterious = 'Mysterious',
-  Colorful = 'Colorful',
-  Neutral = 'Neutral',
-  Melancholy = 'Melancholy',
-  Random = 'Random',
-}
+import { bindActionCreators } from 'redux';
 
 type PostThemeState = {
   selected?: any;
 };
 
-export class PostTheme extends React.Component<{}, PostThemeState> {
+interface PostThemeProps extends BookfeedProps {
+  setBackgroundTheme: any;
+}
+
+export class _PostTheme extends React.Component<PostThemeProps, PostThemeState> {
   state = { selected: ThemeType.Romantic };
 
   setSelected = (selected: any) => {
@@ -24,7 +26,7 @@ export class PostTheme extends React.Component<{}, PostThemeState> {
   };
 
   render() {
-    const { selected } = this.state;
+    const { bookFeed } = this.props;
     return (
       <div css={styles.wrapper}>
         <div css={styles.label}>Background Theme</div>
@@ -32,8 +34,8 @@ export class PostTheme extends React.Component<{}, PostThemeState> {
           {Object.values(ThemeType).map(theme => (
             <div
               css={styles.themeLabel}
-              className={selected === theme ? 'selected' : undefined}
-              onClick={() => this.setSelected(theme)}
+              className={bookFeed.backgroundTheme === theme ? 'selected' : undefined}
+              onClick={() => this.props.setBackgroundTheme(theme)}
             >
               {theme}
             </div>
@@ -43,3 +45,12 @@ export class PostTheme extends React.Component<{}, PostThemeState> {
     );
   }
 }
+
+function mapDispatchToProps(dispatch: any) {
+  return bindActionCreators(bookFeedActions, dispatch);
+}
+
+export const PostTheme = connect(
+  null,
+  mapDispatchToProps,
+)(_PostTheme);

@@ -1,11 +1,19 @@
 import * as React from 'react';
 import { BookFeedState } from '../../../service/bookFeed/reducer';
+import { ProfileState } from '../../../service/profile/reducer';
 import { PageHeader } from '../../PageHeader';
 
-export const BookfeedHeader: React.FunctionComponent<BookFeedState> = props => (
+export interface BookfeedHeaderProps {
+  bookFeed: BookFeedState;
+  profile: ProfileState;
+  onClickActionButton: any;
+}
+
+export const BookfeedHeader: React.FunctionComponent<BookfeedHeaderProps> = props => (
   <PageHeader
     headerTitle="Add Post"
     actionButtonLabel="Share"
-    isActionButtonActive={props.note.length > 0}
+    isActionButtonActive={props.bookFeed.note.length > 0}
+    onClickActionButton={props.onClickActionButton}
   />
 );

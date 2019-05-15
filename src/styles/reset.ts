@@ -52,6 +52,9 @@ export const resetLayout = css`
 `;
 
 export const reset = css`
+  * {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  }
   .a11y {
     display: inline-block;
     width: 0;

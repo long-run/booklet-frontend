@@ -1,12 +1,12 @@
 /** @jsx jsx */ jsx;
 import { jsx } from '@emotion/core';
-import { ReactEventHandler } from 'react';
 import * as React from 'react';
+import { ReactEventHandler } from 'react';
 import { colors } from '../../../styles/colors';
+import { PostStatus } from '../../Post/Summary';
 import ArrowDownIcon from '../../SVG/ArrowDown.svg';
 import { BookFeedStyles } from '../styles';
 import * as styles from './styles';
-import { PostStatus } from '../../Post/Summary';
 
 export interface ReadingStatusProps {
   status: PostStatus;

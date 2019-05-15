@@ -34,7 +34,7 @@ export const postsInitialState: PostsState = [];
 
 export class PostsReducer extends ImmerReducer<PostsState> {
   public addPost(payload: { post: PostState }) {
-    this.draftState.push(payload.post);
+    this.draftState.unshift(payload.post);
   }
 
   public updatePost(payload: { post: PostState }) {

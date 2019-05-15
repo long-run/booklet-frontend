@@ -7,7 +7,7 @@ import { AppState } from '../service/app/reducer';
 import { BookFeedState } from '../service/bookFeed/reducer';
 import { PostsState } from '../service/posts/reducer';
 import { ProfileState } from '../service/profile/reducer';
-import { initialState } from './intialState';
+import { initialState } from './initialState';
 
 import { rootReducers } from './reducers';
 import rootSaga from './sagas';

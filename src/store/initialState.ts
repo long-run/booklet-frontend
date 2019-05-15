@@ -1,5 +1,5 @@
-import { ThemeType } from '../components/Bookfeed/PostTheme';
 import { PostStatus } from '../components/Post/Summary';
+import { ThemeType } from '../service/bookFeed/reducer';
 import { posts } from './mock';
 
 export const initialState = () => ({
@@ -7,11 +7,11 @@ export const initialState = () => ({
   bookFeed: {
     title: '',
     author: '',
-    rating: 4,
+    rating: -1,
     coverImage: '',
     status: PostStatus.CurrentlyReading,
     modifiedDate: 'Just now',
-    backgroundTheme: ThemeType.Colorful,
+    backgroundTheme: ThemeType.Romantic,
     note: '',
   },
   profile: {
