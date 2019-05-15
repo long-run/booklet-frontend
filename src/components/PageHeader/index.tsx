@@ -21,7 +21,7 @@ export const PageHeader: React.FunctionComponent<PageHeaderState> = props => {
       <button css={pageHeaderStyles.arrow} onClick={() => Router.back()}>
         <ArrowIcon css={pageHeaderStyles.arrowIcon} fill={colors.gray_30} />
       </button>
-      <div css={pageHeaderStyles.title}>{headerTitle}</div>
+      <h2 css={pageHeaderStyles.title}>{headerTitle}</h2>
       {actionButtonLabel && (
         <button
           css={pageHeaderStyles.actionButton}

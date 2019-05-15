@@ -34,6 +34,7 @@ export const resetAppearance = css`
   background: none;
   box-shadow: none;
   border: 0;
+  outline: 0;
 `;
 
 export const resetFont = css`

@@ -3,16 +3,18 @@ import { colors } from '../../styles/colors';
 
 export const pageHeaderStyles = {
   wrapper: css`
-    display: flex;
+    position: relative;
     width: 100%;
     height: 44px;
     background-color: ${colors.gray_10};
   `,
   arrow: css`
-    display: inline-block;
+    display: block;
     padding: 14px;
-    flex-direction: row;
     cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
   `,
   arrowIcon: css`
     height: 15px;
@@ -28,6 +30,9 @@ export const pageHeaderStyles = {
     flex: auto;
   `,
   actionButton: css`
+    position: absolute;
+    right: 0;
+    top: 0;
     font-size: 17px;
     font-weight: normal;
     font-style: normal;
