@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { Store } from 'redux';
 import withRedux from 'next-redux-wrapper';
 import makeStore, { StoreRootState } from '../store/config';
+import { Splash } from './Splash';
 
 interface StoreAppProps extends AppComponentProps {
   store: Store<StoreRootState>;
@@ -10,10 +11,16 @@ interface StoreAppProps extends AppComponentProps {
   pageProps: any;
 }
 
-class StoreApp extends App<StoreAppProps> {
+interface StoreAppState {
+  isFirst: boolean;
+}
+
+class StoreApp extends App<StoreAppProps, StoreAppState> {
   constructor(props: StoreAppProps) {
     super(props);
   }
+
+  state = { isFirst: true };
 
   public static async getInitialProps({
     ctx,
@@ -32,13 +39,19 @@ class StoreApp extends App<StoreAppProps> {
     };
   }
 
+  componentDidMount(): void {
+    setTimeout(() => this.setState({ isFirst: false }), 2500);
+  }
+
   public render() {
     const { Component, pageProps, store } = this.props;
+    const { isFirst } = this.state;
 
     return (
       <Container>
         <Provider store={store}>
           <Component {...pageProps} />
+          {isFirst ? <Splash /> : null}
         </Provider>
       </Container>
     );

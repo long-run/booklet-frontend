@@ -1,22 +1,21 @@
-/** @jsx jsx */ jsx;
-import { css, jsx } from '@emotion/core';
-import { colors } from '../styles';
-import Link from 'next/link';
+/** @jsx jsx */
+jsx;
+import { jsx } from '@emotion/core';
+import Router from 'next/router';
+import React from 'react';
+import { Splash } from './Splash';
+// import Router from 'next/router';
 
-const tempButtonStyle = css`
-  display: inline-block;
-  border: 1px solid blue;
-  background: white;
-  padding: 3px;
-  color: blue;
-  border-radius: 3px;
-  margin: 20px;
-`;
+export default class Home extends React.Component {
+  componentDidMount() {
+    setTimeout(() => {
+      const href = '/timeline';
+      const as = href;
+      Router.push(href, as, { shallow: true });
+    }, 1000);
+  }
 
-export default () => (
-  <div>
-    <Link href="/timeline">
-      <a css={tempButtonStyle}>GO Timeline page → </a>
-    </Link>
-  </div>
-);
+  render() {
+    return <Splash />;
+  }
+}
