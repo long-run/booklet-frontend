@@ -1,4 +1,3 @@
-import { jsx } from '@emotion/core';
 import React from 'react';
 import { AddPost } from '../../components/AddPost';
 import { GNB } from '../../components/GNB';

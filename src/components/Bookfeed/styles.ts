@@ -7,6 +7,7 @@ export const body = css`
   height: 100vh;
   overflow-x: hidden;
 `;
+
 export const BookFeedStyles = {
   wrapper: css`
     display: flex;
