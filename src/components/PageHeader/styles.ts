@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
-import { colors } from '../../../styles/colors';
+import { colors } from '../../styles/colors';
 
-export const BookfeedHeaderStyles = {
+export const pageHeaderStyles = {
   wrapper: css`
     display: flex;
     width: 100%;
@@ -10,11 +10,13 @@ export const BookfeedHeaderStyles = {
   `,
   arrow: css`
     display: inline-block;
-    height: 15px;
-    width: 10px;
     padding: 14px;
     flex-direction: row;
     cursor: pointer;
+  `,
+  arrowIcon: css`
+    height: 15px;
+    width: 10px;
   `,
   title: css`
     display: inline-block;
@@ -25,7 +27,7 @@ export const BookfeedHeaderStyles = {
     text-align: center;
     flex: auto;
   `,
-  addButton: css`
+  actionButton: css`
     font-size: 17px;
     font-weight: normal;
     font-style: normal;
