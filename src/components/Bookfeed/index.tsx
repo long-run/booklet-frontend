@@ -47,22 +47,6 @@ const themeTypeToImage = (themeType: ThemeType) => {
   }
 };
 
-const mockBookFeed = {
-  title: '팩트풀니스',
-  author: '한스 로슬링',
-  rating: -1,
-  coverImage: 'https://misc.ridibooks.com/cover/1546000541/xxlarge',
-  status: PostStatus.CurrentlyReading,
-  modifiedDate: 'Just now',
-  backgroundTheme: ThemeType.Colorful,
-  note:
-    'Hans Rosling explains how media bias, ideological preconceptions and statistical illiteracy makes most people (in rich countries) believe in a gloomy and spectacularly wrong worldview. The book carefully explains by data and vivid examples how positive developments are systematically underreported, while disaster news are vastly over-reported. Rosling categorise the 10 most important sources of bias and misconceptions as well as explaining strategies on how to avoid them.\n' +
-    '\n' +
-    "This book is a treasure trove of evidence based reasoning, global statistics and myth busting! I read it just after finishing Steven Pinker's Enlightenment Now: The Case for Reason, Science, Humanism, and Progress. These books have a lot in common, both in goal and tone, but I enjoyed Rosling's book much more.\n" +
-    '\n' +
-    'Unless you have watched Roslings famous lectures (available on TED and Youtube), this book will forever change the way you understand global health, demography and development. - harald groven',
-};
-
 export class _Bookfeed extends React.Component<BookfeedProps, BookfeedInnerState> {
   state = { isOpen: false, selected: this.props.bookFeed.status };
   setIsOpen = () => this.setState({ isOpen: !this.state.isOpen });
@@ -76,7 +60,6 @@ export class _Bookfeed extends React.Component<BookfeedProps, BookfeedInnerState
     addPost({
       post: {
         ...bookFeed,
-        ...mockBookFeed, // todo remove
         ...profile,
         id: '' + Date.now(),
         likeCount: 0,
