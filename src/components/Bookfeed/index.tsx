@@ -69,7 +69,7 @@ export class _Bookfeed extends React.Component<BookfeedProps, BookfeedInnerState
         backgroundImage: themeTypeToImage(bookFeed.backgroundTheme),
       },
     });
-    Router.push('/timeline');
+    Router.back();
   };
 
   render() {
