@@ -8,6 +8,11 @@ export const body = css`
   overflow-x: hidden;
 `;
 
+export const selectedBookList = css`
+  padding: 16px;
+  border-bottom: solid 1px ${colors.gray_10};
+`;
+
 export const BookFeedStyles = {
   wrapper: css`
     display: flex;

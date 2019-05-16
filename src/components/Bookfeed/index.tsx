@@ -19,6 +19,7 @@ import { Profile } from './Profile';
 import { Rating } from './Rating';
 import { ReadingStatus } from './ReadingStatus';
 import * as styles from './styles';
+import { BookList } from '../BookList';
 
 export interface BookfeedProps {
   bookFeed: BookFeedState;
@@ -68,18 +69,28 @@ export class _Bookfeed extends React.Component<BookfeedProps, BookfeedInnerState
         backgroundImage: themeTypeToImage(bookFeed.backgroundTheme),
       },
     });
-    Router.back();
+    Router.push('/timeline');
   };
 
   render() {
     const { selected, isOpen } = this.state;
-    const { profile } = this.props;
+    const { profile, bookFeed } = this.props;
 
     return (
       <div css={styles.body}>
         <BookfeedHeader {...this.props} onClickActionButton={this.handleOnShare} />
         <Profile {...profile} />
-        <AddBook />
+        {bookFeed.title ? (
+          <div css={styles.selectedBookList}>
+            <BookList
+              thumbnailUrl={bookFeed.coverImage}
+              title={bookFeed.title}
+              author={bookFeed.author}
+            />
+          </div>
+        ) : (
+          <AddBook />
+        )}
         <Rating {...this.props} />
         <ReadingStatus status={selected} onClickStatus={this.setIsOpen} />
         <PostTheme {...this.props} />
